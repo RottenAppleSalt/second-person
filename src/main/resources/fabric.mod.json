@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "second-person",
+	"version": "${version}",
+	"name": "Second Person",
+	"description": "Brings second person perspective to Minecraft",
+	"authors": [
+		"Apple Salt"
+	],
+	"contact": {
+		"homepage": "https://rottenapplesalt.github.io/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/second-person/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"applesalt.secondperson.SecondPerson"
+		],
+		"fabric-datagen": [
+			"applesalt.secondperson.SecondPersonDataGenerator"
+		],
+		"client": [
+			"applesalt.secondperson.SecondPersonClient"
+		]
+	},
+	"mixins": [
+		"second-person.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
